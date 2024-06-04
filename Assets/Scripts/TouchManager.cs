@@ -13,8 +13,8 @@ public class TouchManager : MonoBehaviour
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePos.z = 0;
 
-            RaycastHit hit;
-            if (Physics.Raycast(mousePos, Vector3.forward, out hit))
+            RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector3.forward);
+            if (hit.collider != null)
             {
                 if (hit.collider.gameObject.tag == "Pattern")
                 {
@@ -24,23 +24,25 @@ public class TouchManager : MonoBehaviour
             }
         }
 
-        if (TouchState == TouchStates.PlacingPattern && Input.GetMouseButtonUp(0)) 
+        if (TouchState == TouchStates.PlacingPattern)
         {
-            TouchState = TouchStates.Idle;
-
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePos.z = 0;
 
-            RaycastHit hit;
-            if (Physics.Raycast(mousePos, Vector3.forward, out hit))
+            RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector3.forward);
+            if (hit.collider != null)
             {
                 if (hit.collider.gameObject.tag == "Tile")
                 {
-                    TouchState = TouchStates.PlacingPattern;
-
-                    GameManager.Instance.BoardManager.PlacePattern(hit.collider.gameObject.name);
+                    GameManager.Instance.BoardManager.PreviewPattern(hit.collider.gameObject.name);
                 }
             }
+        }
+
+        if (TouchState == TouchStates.PlacingPattern && Input.GetMouseButtonUp(0)) 
+        {
+            TouchState = TouchStates.Idle;
+            GameManager.Instance.BoardManager.PlacePattern(); 
         }
     }
 }

@@ -17,5 +17,8 @@ public class GameManager : MonoBehaviour
 
     public BoardManager BoardManager;
     public TouchManager TouchManager;
-    public Pattern CurrentlySelectedPattern;
+    public HeaderUIHandler HeaderUIHandler;
+
+    [HideInInspector] public Pattern CurrentlySelectedPattern;
+    [HideInInspector] public Profile Profile = new Profile();
 }

@@ -105,6 +105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DefaultSprite: {fileID: 21300000, guid: a15c8f3407cb6da46ab829c1a3808a01, type: 3}
   FullSprite: {fileID: 21300000, guid: b5a74de51b6f8a44ea78fd5101852e20, type: 3}
+  HoverSprite: {fileID: 21300000, guid: f4029aac52a625c49a7c07e02c8d2e14, type: 3}
 --- !u!61 &7216478534717402265
 BoxCollider2D:
   m_ObjectHideFlags: 0

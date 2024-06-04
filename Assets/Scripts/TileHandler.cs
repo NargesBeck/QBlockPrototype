@@ -6,6 +6,10 @@ public class TileHandler : MonoBehaviour
 {
     [SerializeField] private Sprite DefaultSprite;
     [SerializeField] private Sprite FullSprite;
+    [SerializeField] private Sprite HoverSprite;
+
+    public enum TileStates { Empty, Hover, Full }
+    public TileStates CurrentState = TileStates.Empty;
 
     private SpriteRenderer spriteRenderer;
     private SpriteRenderer SpriteRenderer
@@ -20,6 +24,25 @@ public class TileHandler : MonoBehaviour
 
     public void FillIn()
     {
+        CurrentState = TileStates.Full;
         SpriteRenderer.sprite = FullSprite;
+    }
+
+    public void Hover()
+    {
+        CurrentState = TileStates.Hover;
+        SpriteRenderer.sprite = HoverSprite;
+    }
+
+    public void UnHover()
+    {
+        CurrentState = TileStates.Empty;
+        SpriteRenderer.sprite = DefaultSprite;
+    }
+
+    public void Empty()
+    {
+        CurrentState = TileStates.Empty;
+        SpriteRenderer.sprite = DefaultSprite;
     }
 }
