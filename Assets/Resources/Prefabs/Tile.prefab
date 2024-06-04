@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a15c8f3407cb6da46ab829c1a3808a01, type: 3}
+  m_Sprite: {fileID: -532300015, guid: ef7267f554ee80c46bcb15813849cb5a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,9 +103,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e0d695d427e8b449853e45fb50adf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultSprite: {fileID: 21300000, guid: a15c8f3407cb6da46ab829c1a3808a01, type: 3}
-  FullSprite: {fileID: 21300000, guid: b5a74de51b6f8a44ea78fd5101852e20, type: 3}
-  HoverSprite: {fileID: 21300000, guid: f4029aac52a625c49a7c07e02c8d2e14, type: 3}
+  DefaultSprite: {fileID: -532300015, guid: ef7267f554ee80c46bcb15813849cb5a, type: 3}
+  FullSprite: {fileID: 919062236, guid: ef7267f554ee80c46bcb15813849cb5a, type: 3}
+  HoverSprite: {fileID: -445741358, guid: ef7267f554ee80c46bcb15813849cb5a, type: 3}
+  CurrentState: 0
 --- !u!61 &7216478534717402265
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -123,7 +124,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.87, y: 1.86}
+    oldSize: {x: 1.8571428, y: 1.8571428}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
